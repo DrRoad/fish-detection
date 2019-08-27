@@ -11,7 +11,7 @@ The task cannot be directly solved by a CNN classifier. The problem is most of t
 Image -> Detector -> Image with only fish -> Classifier
 
 #### Architecture
-Detectors:
+Detectors:  
 1.[Faster-RCNN](https://arxiv.org/abs/1506.01497): modified from [maskrcnn-benchmask](https://github.com/facebookresearch/maskrcnn-benchmark).  
 2.[SSD](https://arxiv.org/abs/1512.02325): VGG16 based SSD, thanks to [sgrvinod's great tutorial](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Object-Detection).  
 3.[YOLO-v3](https://arxiv.org/abs/1804.02767): originated from [pjreddie](https://pjreddie.com/darknet/yolo/); train by the code from [AlexeyAB](https://github.com/AlexeyAB/darknet).  
