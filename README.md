@@ -4,11 +4,11 @@
 https://www.kaggle.com/c/the-nature-conservancy-fisheries-monitoring
 
 #### Task
-Fish image classification and evaluated by log loss of classes
+Given a training dataset of 3792 images and testing dataset of 1000 images taken from fixed cameras mounted on fish boats. The task is to build algorithms to automatically detect and classify the species of fish in the image, and evaluated by log loss of classes.
 
 #### Solution
-The task cannot be directly solved by a CNN classifier. The problem is most of the camera images contain rather complicated environment yet the fish is rather small within an image. So the effective way is
-Image -> Detector -> Image with only fish -> Classifier
+The task cannot be directly solved by a CNN classifier. The problem is most of the camera images contain rather complicated environment yet the fish is rather small within an image. Thus we need a fish object detector. Another challenge is the data is quite small and imbalanced for each species class. Therefore it's hard for the detector to directly do classification. So the effective way is that firstly build a fish detector (fish or not), then crop the window with only fish from the image, and finally train a classifier from these cropped images. The process is as follows  
+  Image -> Obj. Detector -> Image with only fish -> Classifier.
 
 #### Architecture
 Detectors:  
