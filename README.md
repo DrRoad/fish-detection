@@ -12,16 +12,16 @@ The task cannot be directly solved by a CNN classifier. The problem is most of t
 
 #### Architecture
 Detectors:  
-1.[Faster-RCNN](https://arxiv.org/abs/1506.01497):
+1.[Faster-RCNN](https://arxiv.org/abs/1506.01497):  
 With ResNet-50 based FPN as base network RPN, modified from [maskrcnn-benchmask](https://github.com/facebookresearch/maskrcnn-benchmark).  
-2.[SSD](https://arxiv.org/abs/1512.02325):
+2.[SSD](https://arxiv.org/abs/1512.02325):  
 With VGG16 as base network, modified from [sgrvinod's great tutorial](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Object-Detection).  
-3.[YOLO-v3](https://arxiv.org/abs/1804.02767):
+3.[YOLO-v3](https://arxiv.org/abs/1804.02767):  
 Originated from [pjreddie](https://pjreddie.com/darknet/yolo/); train by the code from [AlexeyAB](https://github.com/AlexeyAB/darknet).  
 
 Performances in downstream classification task: 1 > 2 > 3.  
 
-Classifier:
+Classifier:  
 ResNet-50 + 8-class classification head
 
 The performance results may also depend on many hyperparameters - batch size, lr schedule, training steps etc.
